@@ -102,19 +102,24 @@ export const HomeSection: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* About Section */}
+        {/* SEO Rich Description Section */}
         <motion.div
           variants={itemVariants}
           className="service-card"
-          style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}
+          style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
         >
-          <div>
-            <h2 style={{ fontSize: '20px', color: 'var(--navy)', margin: 0, fontWeight: 800 }}>Honest Prices. Real Experience.</h2>
-            <span style={{ color: '#d85816', fontSize: '13px', fontWeight: 700, textTransform: 'uppercase' }}>Serving the Virginia Peninsula</span>
+          <h2 style={{ fontSize: '22px', color: 'var(--text-primary)', margin: 0, fontWeight: 800 }}>Expert Mobile Mechanic Services on the Virginia Peninsula</h2>
+          <div style={{ color: 'var(--text-secondary)', fontSize: '15px', lineHeight: '1.7', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <p style={{ margin: 0 }}>
+              Peninsula Mobile Mechanic provides top-tier, on-demand auto repair services directly to your location across the Virginia Peninsula. Serving Hampton, Newport News, Williamsburg, and Yorktown, Virginia, we bring the auto repair shop to your driveway, office parking lot, or wherever you experience car trouble.
+            </p>
+            <p style={{ margin: 0 }}>
+              Our expert mobile mechanics are equipped to handle a wide array of vehicle repairs and maintenance. We specialize in mobile brake repair, replacing worn brake pads and warped rotors to keep you safe on Virginia's coastal roads. We also perform comprehensive check engine light diagnostics, alternator and starter motor replacements, serpentine belt fixes, battery testing, and scheduled mileage maintenance.
+            </p>
+            <p style={{ margin: 0 }}>
+              Skip the inconvenience of waiting rooms and the expense of towing fees. We offer transparent, upfront quotes and dealership-quality service with the ultimate convenience of mobile repair. Whether your car won't start in Hampton or you need a pre-purchase vehicle inspection in Newport News, Peninsula Mobile Mechanic is your trusted, veteran-owned solution for reliable automotive care.
+            </p>
           </div>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '15px', lineHeight: '1.6', margin: 0 }}>
-            Dealerships overcharge and shops make you wait for weeks. We bring professional mechanic services straight to your home, office, or roadside breakdown. Get dealership-quality repairs with transparent pricing and no surprises.
-          </p>
         </motion.div>
 
 
@@ -130,7 +135,7 @@ export const HomeSection: React.FC = () => {
         </motion.div>
 
         {/* Business Hours */}
-        <motion.div variants={itemVariants} className="service-card">
+        <motion.div variants={itemVariants} className="service-card" style={{ maxWidth: '640px', width: '100%', margin: '0 auto' }}>
           <div style={{ marginBottom: '14px', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <h3 style={{ fontSize: '20px', color: 'var(--navy)', margin: 0, fontWeight: 800 }}>Business Hours</h3>
           </div>

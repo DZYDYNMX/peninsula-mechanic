@@ -151,7 +151,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialPackage }
 
                 <div className="form-group" style={{ marginBottom: 0 }}>
                   <label htmlFor="client-area">Service Area (City / Zip Code) *</label>
-                  <input id="client-area" type="text" required placeholder="e.g. San Mateo, CA" className="form-input" value={serviceArea} onChange={e => setServiceArea(e.target.value)} disabled={isSubmitting} />
+                  <input id="client-area" type="text" required placeholder="e.g. Hampton, VA" className="form-input" value={serviceArea} onChange={e => setServiceArea(e.target.value)} disabled={isSubmitting} />
                 </div>
 
                 <div className="form-group" style={{ marginBottom: 0 }}>
