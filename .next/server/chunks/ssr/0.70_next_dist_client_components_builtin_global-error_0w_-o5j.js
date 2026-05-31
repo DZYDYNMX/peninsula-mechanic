@@ -1,0 +1,3 @@
+module.exports=[44050,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(19907);a.n(d("[project]/.gemini/antigravity/scratch/peninsula-mechanic-react/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},37763,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(19907);a.n(d("[project]/.gemini/antigravity/scratch/peninsula-mechanic-react/node_modules/next/dist/client/components/builtin/global-error.js"))},75166,a=>{"use strict";a.i(44050);var b=a.i(37763);a.n(b)},94481,a=>{a.n(a.i(75166))}];
+
+//# sourceMappingURL=0.70_next_dist_client_components_builtin_global-error_0w_-o5j.js.map

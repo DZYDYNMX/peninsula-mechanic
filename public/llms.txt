@@ -1,0 +1,19 @@
+# Peninsula Mobile Mechanic
+
+Peninsula Mobile Mechanic is a local, veteran-owned mobile automotive repair service based in Hampton, VA, serving the entire Virginia Peninsula. 
+
+## Services
+- On-Site Diagnostic Scan
+- Brake Pad & Rotor Replacement
+- Preventative Maintenance
+- Pre-Purchase Inspection
+- Battery & Alternator Replacement
+- Starter Replacement
+
+## Contact
+- Phone: (641) 840-2842
+- Location: Hampton, VA 23666
+- Hours: Monday - Sunday, 8:00 AM - 8:00 PM
+- [Book an Appointment](https://peninsula-mechanic-react.vercel.app)
+
+We travel directly to the customer's driveway, office lot, or job site to provide transparent, dealership-quality repairs without the wait.

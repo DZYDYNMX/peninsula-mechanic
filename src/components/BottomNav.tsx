@@ -1,20 +1,20 @@
 import React from 'react';
-import { Home, Wrench, MessageSquare, Calendar } from 'lucide-react';
+import { Home, Wrench, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export type SectionType = 'home' | 'services' | 'reviews' | 'contact';
+import Link from 'next/link';
+
+export type SectionType = 'home' | 'services' | 'contact';
 
 interface BottomNavProps {
   activeSection: SectionType;
-  setActiveSection: (section: SectionType) => void;
 }
 
-export const BottomNav: React.FC<BottomNavProps> = ({ activeSection, setActiveSection }) => {
+export const BottomNav: React.FC<BottomNavProps> = ({ activeSection }) => {
   const tabs = [
-    { id: 'home' as SectionType, label: 'Home', icon: Home },
-    { id: 'services' as SectionType, label: 'Repairs', icon: Wrench },
-    { id: 'reviews' as SectionType, label: 'Reviews', icon: MessageSquare },
-    { id: 'contact' as SectionType, label: 'Request', icon: Calendar },
+    { id: 'home' as SectionType, href: '/', label: 'Home', icon: Home },
+    { id: 'services' as SectionType, href: '/services', label: 'Services', icon: Wrench },
+    { id: 'contact' as SectionType, href: '/contact', label: 'Book', icon: Calendar },
   ];
 
   return (
@@ -24,9 +24,9 @@ export const BottomNav: React.FC<BottomNavProps> = ({ activeSection, setActiveSe
         const isActive = activeSection === tab.id;
 
         return (
-          <button
+          <Link
             key={tab.id}
-            onClick={() => setActiveSection(tab.id)}
+            href={tab.href}
             style={{
               background: 'transparent',
               border: 'none',
@@ -42,6 +42,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ activeSection, setActiveSe
               flex: 1,
               outline: 'none',
               zIndex: 1,
+              textDecoration: 'none'
             }}
           >
             {isActive && (
@@ -83,7 +84,7 @@ export const BottomNav: React.FC<BottomNavProps> = ({ activeSection, setActiveSe
             >
               {tab.label}
             </span>
-          </button>
+          </Link>
         );
       })}
     </nav>

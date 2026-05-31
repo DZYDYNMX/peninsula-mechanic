@@ -9,10 +9,10 @@ interface ServicesSectionProps {
 }
 
 const services = [
-  { id: 'diagnostics', title: 'Electrical & Diagnostics', tagline: 'Check Engine Lights & Power Issues', shortDesc: 'We diagnose and repair check engine lights, dead batteries, faulty alternators, starters, and complex electrical shorts right in your driveway.' },
-  { id: 'brakes', title: 'Brakes & Suspension', tagline: 'Safety & Ride Quality', shortDesc: 'Complete brake jobs including pads, rotors, and calipers. We also handle shocks, struts, control arms, and other suspension components.' },
+  { id: 'diagnostics', title: 'Electrical & Diagnostics', tagline: 'Check Engine Lights & Power Issues', shortDesc: 'We diagnose and repair check engine lights, dead batteries, faulty alternators, starter motors, and complex electrical shorts right in your driveway with dealer-level scanners.' },
+  { id: 'brakes', title: 'Brakes & Suspension', tagline: 'Safety & Ride Quality', shortDesc: 'Complete mobile brake jobs including brake pad replacement, rotors, and calipers. We also handle shocks, struts, control arms, and other suspension components.' },
   { id: 'engine', title: 'Engine & Cooling', tagline: 'Belts, Pumps & Radiators', shortDesc: 'Serpentine belts, timing belts, water pumps, radiators, and cooling fans. We keep your engine running at the right temperature.' },
-  { id: 'maintenance', title: 'Preventative Maintenance', tagline: 'Fluids & Tune-ups', shortDesc: 'Mobile oil changes, transmission fluid service, coolant flushes, spark plugs, and ignition coils to keep your vehicle reliable.' },
+  { id: 'maintenance', title: 'Preventative Maintenance', tagline: 'Fluids & Tune-ups', shortDesc: 'Mobile oil changes, transmission fluid service, coolant flushes, spark plugs, and ignition coils to keep your car reliable.' },
 ];
 
 export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectService }) => {
@@ -29,21 +29,25 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
   return (
     <motion.div className="scroll-container" variants={containerVariants} initial="hidden" animate="visible">
       <div style={{ padding: '4px 0 8px 0' }}>
-        <h2 style={{ fontSize: '28px', fontWeight: 800, marginBottom: '6px', color: 'var(--navy)' }}>Our Mechanic Services</h2>
+        <h2 style={{ fontSize: '28px', fontWeight: 800, marginBottom: '6px', color: 'var(--navy)' }}>Our Mobile Auto Repair Services</h2>
         <p style={{ color: 'var(--text-secondary)', fontSize: '15px' }}>
-          Tap any service category to learn more about the common repairs we perform on-site.
+          Tap any service category to learn more about the common mobile mechanic repairs we perform on-site.
         </p>
       </div>
 
       <div className="responsive-grid-2">
         {services.map((service) => (
-          <motion.div
+          <motion.a
             key={service.id}
+            href={`/services/${service.id}`}
             className="service-card"
             variants={cardVariants}
-            onClick={() => onSelectService(service.id)}
-            style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column' }}
-            whileHover={{ scale: 1.01 }}
+            onClick={(e) => {
+              e.preventDefault();
+              window.history.pushState(null, '', `/services/${service.id}`);
+              onSelectService(service.id);
+            }}
+            style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column', textDecoration: 'none' }}
             whileTap={{ scale: 0.99 }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '10px' }}>
@@ -62,7 +66,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
               <span>View Service Details</span>
               <ChevronRight size={16} />
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
       
