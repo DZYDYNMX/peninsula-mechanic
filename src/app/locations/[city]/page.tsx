@@ -3,14 +3,7 @@ import App from '../../page';
 
 export const runtime = 'edge';
 
-export function generateStaticParams() {
-  return [
-    { city: 'hampton' },
-    { city: 'newport-news' },
-    { city: 'williamsburg' },
-    { city: 'yorktown' },
-  ];
-}
+
 
 export async function generateMetadata({ params }: { params: Promise<{ city: string }> }): Promise<Metadata> {
   const { city } = await params;
