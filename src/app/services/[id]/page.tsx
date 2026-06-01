@@ -24,7 +24,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   
   return {
     title: `${title} | Peninsula Mobile Mechanic`,
-    description: `Professional, on-site ${title.toLowerCase()} right in your driveway. Transparent pricing and expert service in the Peninsula area.`,
+    description: `Professional, on-site ${title.toLowerCase()} right in your driveway. Transparent pricing and expert service on the Virginia Peninsula.`,
+    openGraph: {
+      title: `${title} | Peninsula Mobile Mechanic`,
+      description: `Professional, on-site ${title.toLowerCase()} right in your driveway. Transparent pricing and expert service on the Virginia Peninsula.`,
+      images: [{ url: `/services/${id}.webp`, width: 1200, height: 630 }],
+    },
   };
 }
 

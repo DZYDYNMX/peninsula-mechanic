@@ -3,10 +3,10 @@ import App from '../../page';
 
 export function generateStaticParams() {
   return [
-    { city: 'san-mateo' },
-    { city: 'redwood-city' },
-    { city: 'palo-alto' },
-    { city: 'mountain-view' },
+    { city: 'hampton' },
+    { city: 'newport-news' },
+    { city: 'williamsburg' },
+    { city: 'yorktown' },
   ];
 }
 

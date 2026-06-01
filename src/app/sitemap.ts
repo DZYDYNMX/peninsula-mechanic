@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const locations = ['san-mateo', 'redwood-city', 'palo-alto', 'mountain-view'].map((city) => ({
+  const locations = ['hampton', 'newport-news', 'williamsburg', 'yorktown'].map((city) => ({
     url: `${baseUrl}/locations/${city}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,

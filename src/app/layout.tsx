@@ -3,8 +3,22 @@ import '../index.css';
 import ClientLayout from './ClientLayout';
 
 export const metadata: Metadata = {
-  title: 'Peninsula Mobile Mechanic',
-  description: 'Your trusted mobile mechanic in the Peninsula area. We come directly to you for mobile auto repair, brake pad replacement, check engine light diagnostics, alternator replacement, and routine maintenance.',
+  title: 'Peninsula Mobile Mechanic | Hampton, Newport News & Williamsburg, VA',
+  description: 'Your trusted mobile mechanic serving Hampton, Newport News, Williamsburg, and Yorktown on the Virginia Peninsula. We come directly to you for mobile auto repair, brake pad replacement, check engine light diagnostics, alternator replacement, and routine maintenance.',
+  openGraph: {
+    title: 'Peninsula Mobile Mechanic | Hampton, Newport News & Williamsburg, VA',
+    description: 'Your trusted mobile mechanic on the Virginia Peninsula. We come directly to your driveway for professional auto repair in Hampton, Newport News, and Williamsburg.',
+    url: 'https://peninsulamobilemechanic.com',
+    siteName: 'Peninsula Mobile Mechanic',
+    images: [{ url: '/hero.webp', width: 1200, height: 630 }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Peninsula Mobile Mechanic | Hampton, Newport News & Williamsburg, VA',
+    description: 'Your trusted mobile mechanic on the Virginia Peninsula. We come directly to your driveway for professional auto repair in Hampton, Newport News, and Williamsburg.',
+    images: ['/hero.webp'],
+  },
 };
 
 export default function RootLayout({
